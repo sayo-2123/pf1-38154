@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  get 'rooms/view'
-  get 'posts/index'
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :users
+  root to: "rooms#index"
+  resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create, :destroy] do
+    resources :posts, only: [:index, :create]
+  end
 
+  
 end
