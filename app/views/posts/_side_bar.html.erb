@@ -1,12 +1,4 @@
-<div class="side-bar-header">
-  <div class="user-name">    
-    <%= link_to current_user.name, edit_user_path(current_user) %>
 
-  </div>
-  <div class="new-chat">
-    <%= link_to "ルームを作成する", new_room_path %>
-  </div>
-</div>
 
 <!-- チャットボックス-->
 <div class="side-bar-body">
@@ -17,5 +9,14 @@
       </div>
     </div>
   <% end %>
+</div>
+<div class="side-bar-footer">
+  <div class="user-name">    
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+
+  </div>
+  <div class="new-chat">
+    <%= link_to "ルームを作成する", new_room_path %>
+  </div>
 </div>
 

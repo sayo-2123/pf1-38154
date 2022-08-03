@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   resources :rooms, only: [:new, :create, :destroy] do
     resources :posts, only: [:index, :create]
+  resources :posts
   end
 
   
