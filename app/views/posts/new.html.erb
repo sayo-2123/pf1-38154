@@ -1,1 +1,39 @@
-post/new
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">memo</h2>
+    <%= form_with model: @post, local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %>
+
+    <%# メモ名前と内容 %>
+    <div class="new-items">
+      <%= f.text_area :post_name, class:"items-text", id:"item-name", placeholder:"タイトル", maxlength:"40" %>
+      <div class="items-explain">
+      <%= f.text_area :post_info, class:"items-text", id:"item-info", placeholder:"メモ" ,rows:"15" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# メモ名前と内容 %>
+
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="click-upload">
+        <p>クリックしてファイルをアップロード</p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# 画像 %>
+
+    <%# 下部ボタン %>
+    <div class="keep-btn-contents">
+      <%= f.submit "保存する" ,class:"keep-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>
+
+
+
+  
