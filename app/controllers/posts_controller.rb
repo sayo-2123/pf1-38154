@@ -22,15 +22,12 @@ class PostsController < ApplicationController
       render :new
     end
   end
-  
 
   private
   def post_params
     params.require(:post).permit(:image,:post_title, :post_info, :user).merge(user_id: current_user.id)
   end
 
-
-  # def post_params
   #   params.require(:post).permit(:content).merge(user_id: current_user.id)
   #   params.require(:post).permit(:content, :image).merge(user_id: current_user.id)
 
