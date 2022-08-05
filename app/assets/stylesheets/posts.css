@@ -29,7 +29,7 @@
 }
 
 .side-bar-footer {
-  background-color: #1F232F;
+  background-color: white;
   height: 120px;
   width: 300px;
 
@@ -41,7 +41,7 @@
 
 .user-name a{
   font-size: 20px;
-  color: #fafafa;
+  color: black;
   text-decoration: none;
 }
 

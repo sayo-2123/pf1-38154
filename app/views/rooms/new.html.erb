@@ -1,23 +1,23 @@
-<div class='chat-room-form'>
-  <h1>新規チャットルーム</h1>
+<div class='tag-form'>
+  <h1>新規タグ</h1>
   <%=form_with model: @room, local: true do |f|%>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label'%>
+    <div class='tag-form__field'>
+      <div class='tag-form__field--left'>
+        <%= f.label :name, :タグ名, class: 'tag-form__label'%>
       </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+      <div class='tag-form__field--right'>
+        <%= f.text_field :name, class: 'chat__room_name tag-form__input', placeholder: 'タグ名を入力してください'%>
       </div>
     </div>
-    <div class='chat-room-form__field'>
+    <div class='tag-form__field'>
     </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
+    <div class='tag-form__field'>
+      <div class='tag-form__field--left'>
+        <label class='tag-form__label' for='chat_room_チャットメンバー'>共有メンバー</label>
       </div>
-      <div class='chat-room-form__field--right'>
+      <div class='tag-form__field--right'>
       <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
+          <option value="">共有メンバーを選択してください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
@@ -25,10 +25,11 @@
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'></div>
-      <div class='chat-room-form__field--right'>
-        <%= f.submit class: 'chat-room-form__action-btn'%>
+    <div class='tag-form__field'>
+      <div class='tag-form__field--left'></div>
+      <div class='tag-form__field--right'>
+        <%= f.submit "Keep Tag" ,class: 'tag-form__action-btn' %>
+
       </div>
     </div>
   <% end %>

@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
-  resources :rooms, only: [:new, :create, :destroy] do
-    resources :posts, only: [:index, :create]
-  resources :posts
+  resources :rooms do
+    resources :posts
   end
+  resources :posts
 
   
 end
