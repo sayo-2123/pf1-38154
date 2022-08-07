@@ -1,16 +1,43 @@
 <div class="main-chat">
+
+<%# 投稿内容 %>
   <div class="main-chat-body">
-    <%= render partial: 'message', collection: @posts %>
+    <div class='item-contents'>
+        <% @posts.each do |post| %>
+          <div class='list'>
+            <%= link_to post_path(post.id), method: :get do %>
+              <div class='item-img-content'>
+                <%= image_tag post.image, class: "item-img" %>
+              </div>
+
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= post.post_title %>
+                </h3>
+                <div class='item-price'>
+                  <%= post.post_info %>
+                </div>
+                <div>
+                  <%=l post.created_at %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
   </div>
+  <%# 投稿内容 %>
 
-
+  <%# フッター %>
   <div class="main-chat-footer">
     <div class="chat-footer-left">
         <%= @room.name %>
     </div>
     <div class="chat-footer-right">
-      <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
+      <%= link_to "タグごと消す", room_path(@room), method: :delete %>
       <%= link_to "＋", new_room_post_path(@room) %>
     </div>
   </div>
+  <%# フッター %>
+
 </div>

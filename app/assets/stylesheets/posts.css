@@ -73,30 +73,17 @@
   overflow: scroll;
 }
 
-.messages {
-  margin-top: 10px;
-  height: calc(100vh - 250px);
-}
-
-.upper-message {
+.item-contents {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.list {
+  padding-left: 25px;
+  margin-bottom: 50px;
 }
 
-.message-name {
-  color: #434a54;
-  font-size: 16px;
-}
-.message-date {
-  color: #999;
-  font-size: 12px;
-  padding-left: 10px;
-}
-
-.message {
-    color: #434a54;
-    font-size: 14px;
-    margin-bottom: 40px;
-}
 
 /* フッター */
 .main-chat-footer {
@@ -105,6 +92,9 @@
   height: 120px;
   display: flex;
   justify-content: space-between;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+
 }
 
 .chat-footer-left {
@@ -114,6 +104,7 @@
 }
 .chat-footer-right {
   margin-top: 40px;
+  margin-left: 60vw;
 }
 
 .chat-footer-right a {
@@ -122,3 +113,13 @@
   border: 1px solid darkred;
   padding: 20px 20px;
 }
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
