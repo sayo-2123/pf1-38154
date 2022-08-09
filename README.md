@@ -1,24 +1,48 @@
-# README
+# アプリケーション名m
+memolist
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+タグ(項目)ごとに共有したメンバーと、メモした内容を共有できる。
 
-Things you may want to cover:
+# URL
+https://pf1-38154.herokuapp.com/
 
-* Ruby version
+# テスト用アカウント
+・Basic認証パスワード :admin  
+・Basic認証ID :2222  
+・メールアドレス :a@a  
+・パスワード :a11111  
 
-* System dependencies
+# 利用方法
 
-* Configuration
+## メモ投稿
+1,タグ(項目)を作り、共有するメンバーを指定する  
+2,各タグごとにメモ内容(タイトル、内容、画像)を入力し、投稿する。  
+3,各タグごとにメモを閲覧、編集、削除できる。  
 
-* Database creation
+##
 
-* Database initialization
+# アプリケーションを作成した背景
+プログラミング学習中、一緒に学習しているメンバーと、学んだことや、つまづいたこと、解決したことなど、簡易で共有できるメモアプリがあればと思い、開発することにした。
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/1kvssNPyKUSVaQGP83XTSALQZEj64tzoqTBkqR5blxEI/edit#gid=982722306
 
-* How to run the test suite
+# 実装した機能についての画像やGIFおよびその説明
 
-* Services (job queues, cache servers, search engines, etc.)
+# 実装予定の機能
+メモ検索機能  
+ルーム内の人を複数人選択できる機能  
+鍵付きの部屋を作る機能  
+メモ内容に関して、リアクションをつける機能(自分も、助かった、など)  
 
-* Deployment instructions
+# データベース設計
 
-* ...
+# 画面遷移図
+
+# 開発環境
+
+# ローカルでの動作方法
+
+# 工夫したポイント
+
+
