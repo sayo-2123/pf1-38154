@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @room = Room.find(params[:room_id])
-    @posts = Post.all.order("created_at DESC")
+    @posts = @room.posts.order("created_at DESC")
 
   end
 
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path
+      redirect_to room_posts_path(post_params[:room_id])
     else
       render :new
     end

@@ -27,7 +27,7 @@
     <%# 下部ボタン %>
     <div class="keep-btn-contents">
       <%= f.submit "保存する" ,class:"keep-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', room_posts_path(@room_id), class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
     <% end %>

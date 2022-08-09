@@ -16,6 +16,8 @@
         <label class='tag-form__label' for='chat_room_チャットメンバー'>共有メンバー</label>
       </div>
       <div class='tag-form__field--right'>
+      
+      <%# 共有する人を指定する %>
       <select name="room[user_ids][]">
           <option value="">共有メンバーを選択してください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
@@ -24,6 +26,8 @@
         </select>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
+      <%# 指定 %>
+
     </div>
     <div class='tag-form__field'>
       <div class='tag-form__field--left'></div>

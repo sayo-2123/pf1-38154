@@ -83,7 +83,7 @@
   padding: 46px 40px 0;
   overflow: scroll;
 }
-
+/* 画像引き伸ばし */
 .item-contents {
   display: flex;
   flex-direction: row;
