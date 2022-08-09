@@ -20,7 +20,7 @@
 
 .room {
   padding: 20px 0 30px 0px;
-  border-radius: 5px;
+  border-radius: px;
   background-color: #FDEFC3;
   border: 1px solid white;
 
@@ -42,25 +42,26 @@
   background-color: white;
   height: 120px;
   width: 300px;
-
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .user-name a{
   font-size: 20px;
-  color: black;
+  color: #5F6367;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .new-chat a{
-  font-size: 10px;
-  color: deepskyblue;
+  font-size: 30px;
+  color: #5F6367;
   padding: 14px;
-  border: 1px solid lightblue;
-  margin-right: 20px;
+  border: 1px solid #5f6367;
+  margin-right: 10px;
   text-decoration: none;
 }
 
@@ -87,11 +88,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  color: #5F6367;
+  text-decoration: none;
 
 }
 .list {
   padding-left: 25px;
   margin-bottom: 50px;
+  
 }
 
 
