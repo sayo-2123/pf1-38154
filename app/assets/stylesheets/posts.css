@@ -12,21 +12,31 @@
 }
 
 .side-bar-body {
-  background-color: #C1C1C1;
+  background-color: white;
   height: calc(100vh - 220px);
-  padding: 0 20px;
+  padding: 0 5px;
   overflow: scroll;
 }
 
 .room {
-  padding: 20px 0 40px 0px;
+  padding: 20px 0 30px 0px;
+  border-radius: 5px;
+  background-color: #FDEFC3;
+  border: 1px solid white;
+
 }
 
 .room-name {
-  font-size: 25px;
+  font-size: 30px;
   text-decoration: none;
   color: #1F232F;
+  text-align: center;
 }
+
+.room-name a{
+  color: black;
+}
+
 
 .side-bar-footer {
   background-color: white;

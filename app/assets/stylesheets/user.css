@@ -1,14 +1,16 @@
+
 .account-page .account-page__inner {
   width: 980px;
-  margin: 60px auto;
+  margin: 100px auto;
   padding: 60px;
-  background-color: #fff;
+  background-color: #FDEFC3;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
   float: left;
   width: 50%;
+  
 }
 .account-page .account-page__inner:after {
   clear: both;
@@ -26,7 +28,7 @@
   display: block;
   width: 60px;
   margin-top: 5px;
-  border-bottom: 1px solid #38aef0;
+  border-bottom: 1px solid #51a3d2;
 }
 .account-page .account-page__header h5 {
   margin-bottom: 20px;
