@@ -1,7 +1,7 @@
 <div class="main-chat">
 
 <%# 投稿内容 %>
-  <div class="main-chat-body">
+  <div class="main-chat-body-index">
     <div class='item-contents'>
         <% @posts.each do |post| %>
           <div class='list'>
@@ -30,18 +30,6 @@
     </div>
   </div>
   <%# 投稿内容 %>
-  <% if @room%>
-    <%# フッター %>
-    <div class="main-chat-footer">
-      <div class="chat-footer-left">
-          <%= @room.name %>
-      </div>
-      <div class="chat-footer-right">
-        <%= link_to "タグごと消す", room_path(@room), method: :delete %>
-        <%= link_to "＋", new_room_post_path(@room) %>
-      </div>
-    </div>
-    <%# フッター %>
-  <% end %>
+
 
 </div>

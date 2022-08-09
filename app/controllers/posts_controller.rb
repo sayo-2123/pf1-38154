@@ -3,7 +3,6 @@ class PostsController < ApplicationController
     @post = Post.new
     @room = Room.find(params[:room_id])
     @posts = @room.posts.order("created_at DESC")
-
   end
 
   

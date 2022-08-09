@@ -3,7 +3,7 @@
 <!-- チャットボックス-->
 <div class="side-bar-body">
 <% current_user.rooms.each do |room| %>
-    <div class="room">
+    <div class="room" id="room">
       <div class="room-name">
         <%= link_to room.name, room_posts_path(room) %>
       </div>
