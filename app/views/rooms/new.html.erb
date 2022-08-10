@@ -20,12 +20,15 @@
       <%# 共有する人を指定する %>
       <select name="room[user_ids][]">
           <option value="">共有メンバーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
+          <%User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
         </select>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
+      <div>
+     
+</div>
       <%# 指定 %>
 
     </div>
