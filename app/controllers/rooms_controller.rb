@@ -1,7 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    @posts = Post.all.order("created_at DESC")
-    @name
+    @posts = Post.where(user_id: current_user.id).order("created_at DESC")    
   end
   
   def new

@@ -1,38 +1,44 @@
 <%# <%= render "shared/header" %>
 
-<%# 商品の概要 %>
-<div class="post-show">
-  <div class="post-box">
-    <h2 class="name">
-      <%= @post.post_title %>
-    </h2>
-    <div class="post-img-content">
+ <div class= "show-all">
+  <div class="post-img-content">
       <%= image_tag @post.image ,class:"post-box-img" %>
-     
-    </div>
+  </div>
+  <h2 class="show-title">
+      <%= @post.post_title %>
+  </h2>
+  <h2 class="show-info">
+      <%= @post.post_info %>
+  </h2>
+
+  <%# コメントコメントボックス %>
+    <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <button type="submit" class="comment-btn">
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+  <%# コメントボックス %>
+
+  <%# 編集/削除 %>
+  <div>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+    <%= link_to "メモの編集", edit_post_path, method: :get, class: "post-red-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "削除", post_path, method: :delete, class:"post-destroy" %>
+    <% end %>
+  </div>
+</div>
 
 
-    <%# <% if user_signed_in? && current_user.id == @post.user_id
-      <%= link_to "商品の編集", edit_post_path, method: :get, class: "post-red-btn" %>
-      <%# <p class="or-text">or</p>
-      <%= link_to "削除", post_path, method: :delete, class:"post-destroy" %>
-    <%# <% end %> %> %> %>
 
    
 
-    <div class="post-explain-box">
-      <span><%= @post.post_info %></span>
-    </div>
 
-    <%# <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span> %>
-      </div>
-      <%# <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切な商品の通報</span>
-      </div> %>
-    </div>
-  </div>
-  <%# /商品の概要 %>
