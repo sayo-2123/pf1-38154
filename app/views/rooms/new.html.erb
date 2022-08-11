@@ -18,15 +18,13 @@
       <div class='tag-form__field--right'>
       
       <%# 共有する人を指定する %>
-      <select name="room[user_ids][]">
-          <option value="">共有メンバーを選択してください</option>
-          <%User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
+      
+           <% User.where.not(id: current_user.id).each do |user| %>
+        <input type="checkbox" value="<%= user.id %>"><%= user.name %>
+        <% end %>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
-      <div>
+    <div>
      
 </div>
       <%# 指定 %>
@@ -35,7 +33,7 @@
     <div class='tag-form__field'>
       <div class='tag-form__field--left'></div>
       <div class='tag-form__field--right'>
-        <%= f.submit "Keep Tag" ,class: 'tag-form__action-btn' %>
+        <%= f.submit "つくる" ,class: 'tag-form__action-btn' %>
 
       </div>
     </div>
