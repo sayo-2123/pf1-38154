@@ -10,23 +10,17 @@
       </div>
     </div>
     <div class='tag-form__field'>
-    </div>
-    <div class='tag-form__field'>
       <div class='tag-form__field--left'>
         <label class='tag-form__label' for='chat_room_チャットメンバー'>共有メンバー</label>
       </div>
       <div class='tag-form__field--right'>
         <% User.where.not(id: current_user.id).each do |user| %>
-         <input name="room[user_ids][]" type="checkbox" value="<%= user.id %>"><%= user.name %>>
+         <input name="room[user_ids][]" class="select-name" type="checkbox" value="<%= user.id %>"><%= user.name %>
         <% end %>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     <div>
- 
-
-</div>
-      <%# 指定 %>
-
+  </div>
     </div>
     <div class='tag-form__field'>
       <div class='tag-form__field--left'>

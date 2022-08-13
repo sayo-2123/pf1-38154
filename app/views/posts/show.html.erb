@@ -4,22 +4,22 @@
   <div class="post-img-content">
       <%= image_tag @post.image ,class:"post-box-img" %>
   </div>
-  <h2 class="show-title">
+  <div class="show-title">
       <%= @post.post_title %>
-  </h2>
-  <h2 class="show-info">
+  </div>
+  <div class="show-info">
       <%= @post.post_info %>
-  </h2>
+  </div>
 
   <%# コメントコメントボックス %>
     <div class="comment-box">
     <form>
       <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
+      <%# <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
         <br>
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
+      </p> %>
       <button type="submit" class="comment-btn">
         <span>コメントする<span>
       </button>
@@ -28,7 +28,7 @@
   <%# コメントボックス %>
 
   <%# 編集/削除 %>
-  <div>
+  <div class="edit-tab">
     <% if user_signed_in? && current_user.id == @post.user_id %>
     <%= link_to "メモの編集", edit_post_path, method: :get, class: "post-red-btn" %>
     <p class="or-text">or</p>

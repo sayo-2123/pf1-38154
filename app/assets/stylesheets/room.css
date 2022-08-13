@@ -1,14 +1,14 @@
 h1 {
   letter-spacing: 2px;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
 
 .tag-form {
   width: 980px;
-  height: 400px;
-  margin: 120px auto;
+  height: 450px;
+  margin: 200px auto;
   padding: 40px;
   background-color: #FDEFC3;
   border: 1px solid #ddd;
@@ -28,7 +28,7 @@ h1 {
   line-height: 50px;
   font-weight: bold;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
 }
 .tag-form__input {
   float: left;
@@ -40,6 +40,7 @@ h1 {
 .tag-form__action-btn {
   display: inline-block;
   padding: 12px 20px;
+  margin-left: 20px;
   color: #fff;
   background-color: #38aef0;
   border: 0;
@@ -67,15 +68,17 @@ h1 {
 .tag-form__field--left {
   float: left;
   width: 30%;
+  margin-top: 10px;
   padding-right: 20px;
   padding-left: 20px;
   box-sizing: border-box;
 }
 .tag-form__field--right {
   float: right;
+  margin-top: 10px;
   width: 70%;
-  font-size: 20px;
-  
+  font-size: 23px;
+  overflow-wrap: normal;  
 }
 
 select {
