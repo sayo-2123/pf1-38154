@@ -39,7 +39,6 @@
           <% @users.each do |user| %>
           , <%= user.name %> 
         <% end %>）
-
       </div>
       <div class="chat-footer-right">
         <%= link_to "タグごと消す", room_path(@room), method: :delete %>
