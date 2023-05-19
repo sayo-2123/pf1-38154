@@ -9,7 +9,6 @@
               <% if post.image %>
               <div class='item-img-content'>
                 <%= image_tag post.image, class: "item-img" %>
-                <%# <%= post.image.inspect%> 
               </div>
               <% end %>
 
@@ -21,7 +20,7 @@
                   <%= post.post_info %>
                 </div>
                 <div class="date">
-                  <%=l post.created_at %>
+                  <%=l post.created_at, format: :short %>
                 </div>
               </div>
             <% end %>

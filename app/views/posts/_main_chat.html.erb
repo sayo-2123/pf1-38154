@@ -21,7 +21,7 @@
                   <%= post.post_info %>
                 </div>
                 <div class="date">
-                  <%=l post.created_at %>
+                  <%=l post.created_at, format: :short %>
                 </div>
               </div>
             <% end %>
@@ -35,14 +35,14 @@
     <div class="main-chat-footer">
       <div class="chat-footer-left">
           <%= @room.name %>
-          　のタグ（in
+           （members:
           <% @users.each do |user| %>
-          , <%= user.name %> 
+           <%= user.name %> 
         <% end %>）
       </div>
       <div class="chat-footer-right">
         <%= link_to "タグごと消す", room_path(@room), method: :delete %>
-        <%= link_to "＋", new_room_post_path(@room) %>
+        <%= link_to "投稿する", new_room_post_path(@room) %>
       </div>
     </div> 
     <%# フッター %>

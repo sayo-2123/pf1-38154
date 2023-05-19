@@ -168,7 +168,7 @@
 }
 
 .item-info{
-  height: 100px;
+  height: 100%;
   font-size: 20px;
   overflow: hidden;
   color: black;
@@ -199,7 +199,6 @@
   margin: 0 auto;
   align-items: center;
   object-fit: contain;
-
 }
 
 .post-box-image{
@@ -210,14 +209,15 @@
 
 
 .show-title{
-  font-style: 300px;
+  font-size: 40px;
+
   font-weight: bold;
   text-align: center;
   margin-top: 30px;
 }
 
 .show-info{
-  font-style: 120px;
+  font-size: 20px;
   text-align: center;
   margin-top: 20px;
 }
@@ -232,4 +232,20 @@
   justify-content: center;
   margin-top: 20px;
   font-size: 20px;
+}
+
+.post-img-content{
+  margin: 0 auto;
+  align-items: center;
+  object-fit: contain;
+  position: relative
+}
+
+.post-box-img{
+  height:50vh;
+  width: auto;
+  object-fit: contain;
+  margin: auto;
+  display: flex;
+  
 }
